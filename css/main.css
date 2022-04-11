@@ -28,7 +28,9 @@ header {
 }
 
 main p {
-  margin: auto 1rem;
+  margin: auto 1rem 1rem 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #afafaf;
 }
 
 h1{
@@ -104,6 +106,7 @@ section li h3 {
   margin: .5em 0;
   padding: 1.5rem 0;
   font-family: PT Sans Narrow, sans-serif;
+  font-size: 1.25rem;
 }
 
 section li > img {
@@ -133,10 +136,17 @@ section strong {
   font-weight: normal;
 }
 
+footer p {
+  margin: 0;
+}
+
 footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 1rem;
+  border-top: 2px solid #afafaf;
+  padding-top: 1rem;
 }
 
 footer a {
