@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   font-family: Georgia, serif;
+  line-height: 1.5;
 }
 
 *, *::before, *::after {
@@ -8,7 +9,7 @@ html {
 }
 
 img {
-  width: 100%;
+  width: 100%;/*display:flex*/
 }
 
 body {
@@ -28,9 +29,10 @@ header {
 }
 
 main p {
-  margin: auto 1rem 1rem 1rem;
-  padding-bottom: 1rem;
+  margin: 1.5rem 1rem;
+  padding-bottom: 1.5rem;
   border-bottom: 2px solid #afafaf;
+  font-size: 1.125rem;
 }
 
 h1{
@@ -55,7 +57,7 @@ nav ul {
 }
 
 nav li {
-  font-family: PT Sans Narrow, sans-serif;
+  font-family: "PT Sans Narrow", sans-serif;
   font-size: 1.125rem;
   list-style-type: none;
   padding: .5em .8em;
@@ -72,9 +74,9 @@ nav a {
 }
 
 main h2 {
-  font-family: PT Sans Narrow, sans-serif;
+  font-family: "PT Sans Narrow", sans-serif;
   font-size: 1.25rem;
-  margin: 1rem;
+  margin: 1.5rem 1rem;
 }
 
 section ul {
@@ -105,7 +107,7 @@ section li h3 {
   background-color: rgba(0,0,0,.1);
   margin: .5em 0;
   padding: 1.5rem 0;
-  font-family: PT Sans Narrow, sans-serif;
+  font-family: "PT Sans Narrow", sans-serif;
   font-size: 1.25rem;
 }
 
@@ -144,9 +146,10 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1rem;
+  margin: 1.5rem 1rem;
   border-top: 2px solid #afafaf;
-  padding-top: 1rem;
+  padding-top: 1.5rem;
+  font-size: 0.875rem;
 }
 
 footer a {
