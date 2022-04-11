@@ -6,3 +6,94 @@ html {
 *, *::before, *::after {
   box-sizing: inherit;
 }
+
+img {
+  width: 100%;
+}
+
+body {
+  background-color: #bebebe;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: #bd027d;
+}
+
+header h1{
+  padding: 0;
+  margin: 0 auto;
+  align: center;
+}
+
+nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav li {
+  font-family: PT Sans Narrow, sans-serif;
+  font-size: 1.125rem;
+  list-style-type: none;
+  padding: .5em .8em;
+  margin: 0;
+  background-color: #bd027d;
+  border: 2px solid #960062;
+  border-radius: 6px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+main h2 {
+  font-family: PT Sans Narrow, sans-serif;
+  font-size: 1.25rem;
+}
+
+section ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  margin: 1rem;
+  padding: 0;
+}
+
+section li {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  background-color: #ccc;
+  border: 2px solid #afafaf;
+  border-radius: 6px;
+}
+
+section li h3 {
+  grid-column: 1;
+  grid-row: 2;
+  z-index: 1;
+}
+
+section li > img {
+  grid-column: 1;
+  grid-row: 1 / -1;
+}
+
+section div {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+section div img {
+  width: 1rem;
+}
