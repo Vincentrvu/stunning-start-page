@@ -18,25 +18,38 @@ body {
 }
 
 header {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: auto 10rem auto;
+  grid-template-rows: auto 1.5rem;
+  grid-template-areas:
+    "left center right"
+    ". center .";
+  margin-bottom: 1.5rem;
+}
+
+main p {
+  margin: auto 1rem;
+}
+
+h1{
   margin: 0;
-  padding: 0;
+  grid-area: center;
+  z-index: 1;
+}
+
+nav {
+  grid-column: 1 / -1;
+  grid-row: 1;
   background-color: #bd027d;
 }
 
-header h1{
-  padding: 0;
-  margin: 0 auto;
-  align: center;
-}
-
 nav ul {
-  display: flex;
   margin: 0;
   padding: 0;
-  align-items: center;
+  display: flex;
+  height: 100%;
   justify-content: space-between;
+  align-items: center;
 }
 
 nav li {
@@ -48,6 +61,7 @@ nav li {
   background-color: #bd027d;
   border: 2px solid #960062;
   border-radius: 6px;
+  margin: 1rem;
 }
 
 nav a {
@@ -58,6 +72,7 @@ nav a {
 main h2 {
   font-family: PT Sans Narrow, sans-serif;
   font-size: 1.25rem;
+  margin: 1rem;
 }
 
 section ul {
@@ -72,28 +87,58 @@ section ul {
 section li {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "top"
+    "middle"
+    "bottom";
   background-color: #ccc;
   border: 2px solid #afafaf;
   border-radius: 6px;
 }
 
 section li h3 {
-  grid-column: 1;
-  grid-row: 2;
+  grid-area: bottom;
   z-index: 1;
+  text-align: center;
+  background-color: rgba(0,0,0,.1);
+  margin: .5em 0;
+  padding: 1.5rem 0;
+  font-family: PT Sans Narrow, sans-serif;
 }
 
 section li > img {
-  grid-column: 1;
   grid-row: 1 / -1;
+  grid-column: 1 / -1;
 }
 
 section div {
-  grid-column: 1;
-  grid-row: 1;
+  grid-area: top;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-self: end;
+  align-items: center;
+  border-radius: 1em 0 0 1em;
+  background-color: rgba(0,0,0,.1);
+  padding: 0 .5em;
+  margin-top: .5em;
 }
 
 section div img {
   width: 1rem;
+}
+
+section strong {
+  font-style: italic;
+  font-size: 1.125rem;
+  font-weight: normal;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+footer a {
+  color: #000;
 }
